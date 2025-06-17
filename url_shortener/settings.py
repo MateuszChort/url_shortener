@@ -37,6 +37,9 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    "rest_framework",
+    "shortener",
+    "drf_spectacular",
 ]
 
 MIDDLEWARE = [
@@ -68,7 +71,9 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = "url_shortener.wsgi.application"
-
+REST_FRAMEWORK = {
+    "DEFAULT_SCHEMA_CLASS": "drf_spectacular.openapi.AutoSchema",
+}
 
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
